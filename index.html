@@ -409,7 +409,7 @@
                       <div data-sheet-best="https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=test">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">{{ id }}</div>
                       </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ id }}</div>          
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">{{ id }}</div>
                       </div>
                     <div class="col-auto">
                       <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -450,7 +450,7 @@
                     <canvas id="myChart" width="400" height="400"></canvas>
                           <script>
                             const ctx = document.getElementById('myChart').getContext('2d');
-                            const xlabels = [];
+                            const xlabels = {{ id }};
                             const myChart = new Chart(ctx, {
                                 type: 'bar',
                                 data: {
