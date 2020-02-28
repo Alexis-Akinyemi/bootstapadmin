@@ -407,7 +407,7 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div data-sheet-best="https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/id/10">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">{{ company }}</div>
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">{{ id }}</div>
                       </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                     </div>
@@ -449,11 +449,12 @@
                     <script src = "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
                     <canvas id="myChart" width="400" height="400"></canvas>
                           <script>
-                            var ctx = document.getElementById('myChart').getContext('2d');
-                            var myChart = new Chart(ctx, {
+                            const ctx = document.getElementById('myChart').getContext('2d');
+                            const xlabels = [];
+                            const myChart = new Chart(ctx, {
                                 type: 'bar',
                                 data: {
-                                    labels: ["{{id}}", 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                    labels: xlabels,
                                     datasets: [{
                                         label: '# of Votes',
                                         data: [12, 19, 3, 5, 2, 3],
