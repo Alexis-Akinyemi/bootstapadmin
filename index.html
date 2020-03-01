@@ -742,7 +742,7 @@
               "Content-Type": "application/json"
             }
           })
-          .then((res) => res.text())
+          .then((res) => res.json())
           .then(console.log.bind(console))
           .catch(console.error.bind(console));
     }
