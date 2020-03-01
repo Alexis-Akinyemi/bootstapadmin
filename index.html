@@ -746,8 +746,8 @@
           const data = await response.json();
           const status = data[0].status;
           const company = data[0].company;
-          console.log(data[0].id)
-          document.getElementById('id').textContent = status;
+          console.log(data[0].status)
+          document.getElementById('status').textContent = status;
           document.getElementById('company').textContent = company;
     }
 
