@@ -733,10 +733,9 @@
   <script src="https://sbt.0soft.dev/sheet-best-templates.min.js"></script>
 
   <script>
-    getData();
     const api_url = "https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=11";
     async function getData() {
-      const response = await fetch("https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=11", {
+      const response = await fetch(api_url, {
         "method": "GET",
         "headers": {
               "X-Api-Key": "q#E5zn_#-GVz%#VTGBuoSAbMFZ6fx05h3RWafnLV300DVEUG9Ii-pYJXicTaKR-8",
@@ -746,6 +745,8 @@
           .then((res) => res.text())
           .then(console.log.bind(console))
           .catch(console.error.bind(console));
+          
+    getData();
 
     }
   </script>
