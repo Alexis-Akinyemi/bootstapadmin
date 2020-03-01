@@ -450,7 +450,7 @@
                     <canvas id="myChart" width="400" height="400"></canvas>
                           <script>
                             chartIt()
-                            function chartIt(){
+                            async function chartIt(){
                             await getData();
                             const xlabels = []
                             const ctx = document.getElementById('myChart').getContext('2d');
