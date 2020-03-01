@@ -744,8 +744,7 @@
           })
           .catch(console.error.bind(console));
           const data = await response.json();
-          const status = data[0].status;
-          const company = data[0].company;
+          const {status, company} = data[0];
           console.log(data[0].status)
           document.getElementById('status').textContent = status;
           document.getElementById('company').textContent = company;
