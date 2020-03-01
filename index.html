@@ -742,10 +742,11 @@
               "Content-Type": "application/json"
             }
           })
-          .then((res) => res.json())
-          .then(console.log.bind(console))
           .catch(console.error.bind(console));
+          const data = await response.json();
+          consolt.log(data.id)
     }
+
     getData();
   
   </script>
