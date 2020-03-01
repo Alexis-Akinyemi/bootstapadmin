@@ -407,9 +407,9 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div data-sheet-best="https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=test">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">id= "status"</div>
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">id= "statut"</div>
                       </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">id= "status"</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">id= "statut"</div>
                       </div>
                     <div class="col-auto">
                       <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -744,9 +744,9 @@
           })
           .catch(console.error.bind(console));
           const data = await response.json();
-          const {status, company} = data[0];
-          console.log(data[0].status)
-          document.getElementById('status').textContent = status;
+          const {statut, company} = data;
+          console.log(data[0].statut)
+          document.getElementById('statut').textContent = statut;
           document.getElementById('company').textContent = company;
     }
 
