@@ -503,7 +503,7 @@
                                   })
                                   .catch(console.error.bind(console));
                                   const data = await response.json();
-                                  const company = data[O].company;
+                                  const company = data
                                   console.log(data[0].statut)
                                   xlabels.push(company)
                                   document.getElementById('statut').textContent = statut;
