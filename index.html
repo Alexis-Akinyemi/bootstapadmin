@@ -491,6 +491,23 @@
                                 }
                             });
                           }
+                            const api_url = "https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=test";
+                            async function getData() {
+                              const response = await fetch(api_url, {
+                                "method": "GET",
+                                "headers": {
+                                      "X-Api-Key": "q#E5zn_#-GVz%#VTGBuoSAbMFZ6fx05h3RWafnLV300DVEUG9Ii-pYJXicTaKR-8",
+                                      "Content-Type": "application/json"
+                                    }
+                                  })
+                                  .catch(console.error.bind(console));
+                                  const data = await response.json();
+                                  const company = data[O].company;
+                                  console.log(data[0].statut)
+                                  xlabels.push(company)
+                                  document.getElementById('statut').textContent = statut;
+                                // document.getElementById('company').textContent = company;
+                            }  
                             </script>
                   </div>
                 </div>
@@ -735,25 +752,7 @@
 <!--   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>-->
   <script src="https://sbt.0soft.dev/sheet-best-templates.min.js"></script>
-
-  <script>
-    const api_url = "https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=test";
-    async function getData() {
-      const response = await fetch(api_url, {
-        "method": "GET",
-        "headers": {
-              "X-Api-Key": "q#E5zn_#-GVz%#VTGBuoSAbMFZ6fx05h3RWafnLV300DVEUG9Ii-pYJXicTaKR-8",
-              "Content-Type": "application/json"
-            }
-          })
-          .catch(console.error.bind(console));
-          const data = await response.json();
-          const company = data[O].company;
-          console.log(data[0].statut)
-          xlabels.push(company)
-          document.getElementById('statut').textContent = statut;
-         // document.getElementById('company').textContent = company;
-    }  
+  
 
 </body>
 
