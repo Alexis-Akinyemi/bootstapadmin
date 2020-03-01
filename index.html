@@ -742,12 +742,11 @@
               "X-Api-Key": "q#E5zn_#-GVz%#VTGBuoSAbMFZ6fx05h3RWafnLV300DVEUG9Ii-pYJXicTaKR-8",
               "Content-Type": "application/json"
             }
-          });
-          const response = await response.json();
-          console.log(data);
+          })
           .then((res) => res.text())
           .then(console.log.bind(console))
           .catch(console.error.bind(console));
+
     }
   </script>
 
