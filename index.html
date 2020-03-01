@@ -744,7 +744,10 @@
           })
           .catch(console.error.bind(console));
           const data = await response.json();
+          const {id , company} = data;
           console.log(data[0].id)
+          document.getElementById('id').textContent = id;
+          document.getElementById('company').textContent = company;
     }
 
     getData();
