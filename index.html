@@ -446,7 +446,6 @@
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-area">
-                    <div data-sheet-best="https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=test">
                     <script src = "https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
                     <canvas id="myChart" width="400" height="400"></canvas>
                           <script>
@@ -492,7 +491,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
 
             <!-- Pie Chart -->
@@ -734,6 +732,21 @@
   <script src="js/demo/chart-pie-demo.js"></script>-->
   <script src="https://sbt.0soft.dev/sheet-best-templates.min.js"></script>
 
+  <script>
+    getData();
+    const api_url = "https://sheet.best/api/sheets/72088da1-e18e-4a7d-8787-8ad289056fda/tabs/data/search?id=11";
+    async function getData() {
+      const response = await fetch(api_url, {
+        "method": "GET",
+        "headers": {
+              "X-Api-Key": "q#E5zn_#-GVz%#VTGBuoSAbMFZ6fx05h3RWafnLV300DVEUG9Ii-pYJXicTaKR-8",
+              "Content-Type": "application/json"
+            }
+          });
+          const response = await response.json();
+          console.log(data);
+    }
+  </script>
 
 </body>
 
