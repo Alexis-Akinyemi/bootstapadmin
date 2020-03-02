@@ -504,7 +504,7 @@
                                   .catch(console.error.bind(console));
                                   const data = await response.json();
                                   const company = data[0].statut
-                                  const scores = [data[0].control1, data[0].control2 ]
+                                  const scores = [data[0].control1, data[0].control2, data[0].nps, data[0].pedagogy1, data[0].pedagogy2, data[0].pedagogy3, data[0].pedagogy4, data[0].pedagogy5 ]
                                   console.log(scores)
                                   xlabels.push(company)
                                   //document.getElementById('statut').textContent = statut;
