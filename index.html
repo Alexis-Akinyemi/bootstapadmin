@@ -509,12 +509,12 @@
                                     yAxes: [{
                                       ticks: {
                                         min: 0,
-                                        max: 15000,
+                                        max: 15,
                                         maxTicksLimit: 5,
                                         padding: 10,
                                         // Include a dollar sign in the ticks
-                                        callback: function(value, index, values) {
-                                          return '$' + number_format(value);
+                                        //callback: function(value, index, values) {
+                                         // return '$' + number_format(value);
                                         }
                                       },
                                       gridLines: {
@@ -564,6 +564,7 @@
                                   .catch(console.error.bind(console));
                                   const data = await response.json();
                                   const company = data[0].statut
+                                  const company = ["Contrôle", "NPS", "Pedagogy", "Qualité"]
                                   const scores = [data[0].control1, data[0].control2, data[0].nps, data[0].pedagogy1, data[0].pedagogy2, data[0].pedagogy3, data[0].pedagogy4, data[0].pedagogy5 ]
                                   console.log(scores)
                                   xlabels.push(company)
